@@ -1,30 +1,21 @@
 public class Animal {
+    private static int numOfAnimals = 0;
 
-    public static int numOfAnimals = 0;
+    // Create a getter.
+    // What type of method is this? Is it static and belongs to a class or...
+    // is this method used with objects.
 
-    // Create a constructor
+    public int getNumOfAnimals() {
+        return numOfAnimals;
+    }
 
+
+    // Constructor
     public Animal() {
+        System.out.println("\n A new animal was created!");
         numOfAnimals++;
     }
 
-    String name;
-    String desc;
-    String birthSeason;
-    String color;
-    String weight;
-    String origin01;
-    String origin02;
 
-    // Create a method
-
-    public void makeNoise() {
-        System.out.println("\n This is where an animal make a noise");
-    }
-
-    public String makNoise02() {
-            return "This is a str returned from a method in my Animal class";
-    }
 
 }
-
