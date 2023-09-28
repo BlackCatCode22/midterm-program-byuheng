@@ -6,12 +6,20 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 public class Hyena extends Animal {
+
+
     // Create an ArrayList to store the split values read from animalNames.txt
     private static List<String> myListOfHyenaNames = new ArrayList<>();
 
 
     // Create a static member variable that accumulates the number of hyenas created.
     private static int numOfHyenas = 0;
+
+    // Write a Getter method to look at the static
+    public static int getNumOfHyenas() {
+
+        return numOfHyenas;
+    }
 
     // Create a constructor that will increment numOfHyenas when a new Hyena object is created.
     public Hyena() {
@@ -42,26 +50,20 @@ public class Hyena extends Animal {
 
                 lineNum++;
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
-
     // output the list.
     public static void listOut() {
         for (String name : myListOfHyenaNames) {
             System.out.println(name);
 
         }
+    // Create an id for our new animal.
+
+        int numOfSpecies = 0;
+        String theNewID = Main.genUniqueID("hyena", numOfSpecies;
     }
-
-    // write a Getter method.
-    public int getNumOfHyenas() {
-        return numOfHyenas;
-    }
-
-
-
 }

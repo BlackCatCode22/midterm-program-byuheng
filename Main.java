@@ -4,6 +4,20 @@
 // 26/09/23
 
 public class Main {
+
+    // Creating the genUniqueID method
+
+    public static String genUniqueID(String theSpecies, int numOfSpecies) {
+        String prefix = "";
+        int suffix = numOfSpecies + 1;
+
+        if (theSpecies.contains("hyena")) {
+            prefix = "Hy";
+
+        }
+        return prefix + Integer.valueOf(suffix);
+    }
+
     public static void main(String[] args) {
 
         // Call the static method to create a list of names
@@ -33,8 +47,19 @@ public class Main {
         System.out.println("\n Number of animals is " + myNewHyena.getNumOfAnimals() );
         System.out.println("\n Number of hyenas: " + anotherHyena.getNumOfHyenas());
 
+        // How many hyenas
+        int currentNumOfHyenas = Hyena.getNumOfHyenas();
 
+        System.out.println("\n The number of hyenas is: " + currentNumOfHyenas + "\n\n");
 
+        Hyena oneMore = new Hyena();
 
+        oneMore.setAnimalID("Hy09");
+
+        oneMore.setAnimalColor("yellow spots");
+
+        System.out.println("\n My hyena is " + oneMore.getAnimalColor());
+
+        System.out.println("\n The id of oneMore is " + oneMore.getNumOfAnimals());
     }
 }
