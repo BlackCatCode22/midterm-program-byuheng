@@ -1,65 +1,24 @@
-// Main.java
-// Driver class for the Zoo program
-// Heng Ky
-// 26/09/23
+import java.sql.SQLOutput;
 
 public class Main {
-
-    // Creating the genUniqueID method
-
-    public static String genUniqueID(String theSpecies, int numOfSpecies) {
-        String prefix = "";
-        int suffix = numOfSpecies + 1;
-
-        if (theSpecies.contains("hyena")) {
-            prefix = "Hy";
-
-        }
-        return prefix + Integer.valueOf(suffix);
-    }
-
     public static void main(String[] args) {
 
-        // Call the static method to create a list of names
-        Hyena.inputHyenaNames();
+        System.out.println("\n\nZoo Program\n\n");
+        Animal myAnimal = new Animal();
+        Animal mySecondAnimal = new Animal("some name", "hyena");
 
-        // Show the hyena names:
-        Hyena.listOut();
+        String aName = mySecondAnimal.name;
+        System.out.println("\n The animal name is: " + aName);
 
-        System.out.println("\n Welcome to my Zoo!!");
+        // Create a hyena
+        Hyena myHyena = new Hyena();
 
-        // Look at our animalNames file!
-        // call inputHyenaNames()
+        // Look at the new Hyena object
+        System.out.println("\n The hyena name is: " + myHyena.name);
 
-        Hyena.inputHyenaNames();
+        // Create hyena with a name and species
+        Hyena aNewHyena = new Hyena("Zig" , "Hyena");
 
-
-
-
-        // Create a Hyena object.
-        Hyena myNewHyena = new Hyena();
-
-        System.out.println("\n Number of animals is " + myNewHyena.getNumOfAnimals() );
-        System.out.println("\n Number of hyenas: " + myNewHyena.getNumOfHyenas());
-
-        Hyena anotherHyena = new Hyena();
-
-        System.out.println("\n Number of animals is " + myNewHyena.getNumOfAnimals() );
-        System.out.println("\n Number of hyenas: " + anotherHyena.getNumOfHyenas());
-
-        // How many hyenas
-        int currentNumOfHyenas = Hyena.getNumOfHyenas();
-
-        System.out.println("\n The number of hyenas is: " + currentNumOfHyenas + "\n\n");
-
-        Hyena oneMore = new Hyena();
-
-        oneMore.setAnimalID("Hy09");
-
-        oneMore.setAnimalColor("yellow spots");
-
-        System.out.println("\n My hyena is " + oneMore.getAnimalColor());
-
-        System.out.println("\n The id of oneMore is " + oneMore.getNumOfAnimals());
+        System.out.println(" \n The name of my hyena is: " + aNewHyena.name);
     }
 }
